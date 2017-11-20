@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\a5052818ddbbb913b601748ffbea9f74761dcc3b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_511d24ba2f1340e797b928bb0a9d28a028f155d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\android-sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_6df549dec261401c9c5cc9c61f7dc87a938df543\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\5c645453d143960365c0eac81045a1430bb46f36\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9981feeff827579b3bbfc0aa4814c6bd559342a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\9495857572d89f4216374cc334e890be5f2bb49d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0e1b2270c5f5ff3e3e555ca03578731665f5c116\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\5c556f2b326547f5e9c455def119bd7f3d0735a6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_84fa1021b2c7e07df88797153131977110912eb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\5d62efe395abd0a24f4fb16a30d66bdcfb880c6a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_396edb09b3f6be1e3fd173acfb497fbadcb5d3b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\fb78852051367e71f137494d1043546d0b665b88\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3e654a55c83a66648e33e9ac2cb2758ee0baa498\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\12042de2bfb40eb28235421ebabd932da4a1bf09\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_36b382d617f762fbf9c9cf9e89fae2a8e0e3eabb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_8de61807e9be35348050a1a16a58cec80a0c2f2f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\2d827b39b1480fa708a9179702f95ed797fff1b2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cd81abddbaf2fa7896ba3fa0ae00c1f6ceb75f4e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\8b2287d9a7b26906823de9a16cfe16244c15d6a1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3427cfbc8b017baace436128a488dc159cd5025c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_7c88aee63584960575018a7d0454b660043aaeb4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f00d29a8c3d981546459d7f4eccb97b5538a0df1">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5bc70f63a1e4d778c6dbe35af1442862eb5a3ffa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\75744\.android\build-cache\f8983fd94734be29f10c7c69ed9c9e3ee1af95f8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\75744\IntelliJIDEAProjects\Oldcar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c4962a8f624d3074442b1a668f7ac2674d9e8e83\classes.dex" />
+    </item>
+
+</items>
