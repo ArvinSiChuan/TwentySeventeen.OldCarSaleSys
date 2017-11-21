@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="oldcarsale@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="oldcarsale">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="dblab"/>
+    <schema id="4" parent="1" name="experiment"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="labber"/>
+    <schema id="7" parent="1" name="lagou"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="project_dawn"/>
+    <schema id="11" parent="1" name="st_dselect_sys"/>
+    <schema id="12" parent="1" name="sys"/>
+    <schema id="13" parent="1" name="thewhitesail"/>
+    <schema id="14" parent="1" name="thupi"/>
+    <schema id="15" parent="1" name="train_tickets_services"/>
+    <table id="16" parent="2" name="authorities"/>
+    <table id="17" parent="2" name="users"/>
+    <column id="18" parent="16" name="authority">
+      <Position>1</Position>
+      <DataType>varchar(16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="16" name="username">
+      <Position>2</Position>
+      <DataType>varchar(16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="20" parent="16" name="fk_authorities_users">
+      <ColNames>username</ColNames>
+    </index>
+    <key id="21" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>authority
+username</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="22" parent="16" name="fk_authorities_users">
+      <ColNames>username</ColNames>
+      <RefSchemaName>oldcarsale</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <column id="23" parent="17" name="username">
+      <Position>1</Position>
+      <DataType>varchar(16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="17" name="enabled">
+      <Position>2</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="17" name="password">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="26" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
