@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.RestTool;
+package com.arvinsichuan.resttool;
 
 import android.util.Log;
 import org.springframework.http.HttpEntity;
