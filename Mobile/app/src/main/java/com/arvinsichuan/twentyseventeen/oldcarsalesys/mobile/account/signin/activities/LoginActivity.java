@@ -1,30 +1,115 @@
+/*
+ *     This project is one of projects of ArvinSiChuan.com.
+ *     Copyright (C) 2017, ArvinSiChuan.com <https://arvinsichuan.com>.
+ *
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.signin.activities;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.oldcarsalemobile.R;
 
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.R;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.signup.SignUpActivity;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.entities.WebInfoEntity;
+
+/**
+ * @author ArvinSiChuan
+ */
 public class LoginActivity extends AppCompatActivity {
+
+
+    public static final int REQUEST_CODE_FOR_SIGN_UP_ACTIVITY = 0;
+
+    private LoginActivity thisActivity = this;
+    private EditText usernameText;
+    private Button loginButton;
+    private EditText passwordText;
+    private Button signUpButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        usernameText = (EditText) findViewById(R.id.editText_loginUsername);
+        loginButton = (Button) findViewById(R.id.button_signin);
+        passwordText = (EditText) findViewById(R.id.editText_loginPassword);
+        signUpButton = (Button) findViewById(R.id.button_signup);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               userLogin(usernameText.getText().toString(), passwordText.getText()
+                                                       .toString());
+                                           }
+                                       }
+        );
+        signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                toUserSignUpActivity();
             }
         });
     }
 
+    private void toUserSignUpActivity() {
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivityForResult(intent, REQUEST_CODE_FOR_SIGN_UP_ACTIVITY);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_FOR_SIGN_UP_ACTIVITY) {
+            switch (resultCode) {
+                case SignUpActivity.RESULT_CODE_FOR_SIGN_UP_SUCCESS:
+                    usernameText.setText(data.getStringExtra("username"));
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void userLogin(String username, String password) {
+        UserLoginRequest request = new UserLoginRequest();
+        Toast.makeText(this, "Logging in...", Toast.LENGTH_LONG).show();
+        request.execute(username, password);
+    }
+
+
+    private class UserLoginRequest extends AsyncTask<String, String, WebInfoEntity> {
+
+        @Override
+        protected WebInfoEntity doInBackground(String... strings) {
+
+            WebInfoEntity webInfo = new WebInfoEntity();
+
+            return webInfo;
+        }
+
+        @Override
+        protected void onPostExecute(WebInfoEntity webInfo) {
+            super.onPostExecute(webInfo);
+
+        }
+    }
 }

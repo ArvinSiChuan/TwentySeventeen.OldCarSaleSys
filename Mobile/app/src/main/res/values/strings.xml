@@ -17,6 +17,17 @@
   -->
 
 <resources>
-    <string name="app_name">OldCarSaleMobile</string>
+    <string name="app_name">Old Car Market</string>
     <string name="testSession">TEST</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sing_in">SING IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="network_error">Can not connect to server, please check your internet connection.</string>
+    <string name="sign_up_failed">Sign Up Failed,please check your internet connection and try again.</string>
+    <string name="user_already_signed_up">User Already signed up, please try another username or just go signing in.
+    </string>
+
 </resources>
