@@ -26,7 +26,26 @@ package com.arvinsichuan.general.users.entity;
  * Date: 2017/10/1
  * <p>
  * Package: com.arvinsichuan.users.entity
+ * @author ArvinSiChuan
  */
 public enum AuthoritiesEnum {
-    ROLE_ANONYMOUS,ROLE_USER
+    /**
+     * Anonymous user
+     */
+    ROLE_ANONYMOUS,
+
+    /**
+     * End user
+     */
+    ROLE_USER,
+
+    /**
+     * Seller user
+     */
+    ROLE_SELLER,
+
+    /**
+     * Buyer user
+     */
+    ROLE_BUYER
 }
