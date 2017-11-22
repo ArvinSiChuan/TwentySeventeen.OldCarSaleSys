@@ -594,7 +594,7 @@
       <workItem from="1511178986598" duration="6620000" />
       <workItem from="1511188327958" duration="754000" />
       <workItem from="1511240566101" duration="6673000" />
-      <workItem from="1511326380391" duration="12125000" />
+      <workItem from="1511326380391" duration="12147000" />
     </task>
     <task id="LOCAL-00001" summary="Migrate Auth module and init the session test.">
       <created>1511250116702</created>
@@ -607,7 +607,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27283000" />
+    <option name="totallyTimeSpent" value="27305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
