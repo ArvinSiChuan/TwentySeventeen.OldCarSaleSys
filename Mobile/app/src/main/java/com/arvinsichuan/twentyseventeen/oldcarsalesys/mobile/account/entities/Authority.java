@@ -34,7 +34,6 @@ import java.io.Serializable;
  */
 public class Authority implements Serializable{
 
-
     private static final long serialVersionUID = 9055330315894110112L;
     private AuthoritiesEnum authority;
 

@@ -46,7 +46,7 @@ public class SignUpActivity extends AppCompatActivity {
     private static final String TAG = "SIGN_UP";
 
     public static final int RESULT_CODE_FOR_SIGN_UP_SUCCESS = 0;
-    public static final int RESULT_CODE_FOR_SIGN_UP_CANCEL = 1;
+    private static final int RESULT_CODE_FOR_SIGN_UP_CANCEL = 1;
 
     private EditText usernameEditText;
     private EditText passwordEditText;
@@ -107,11 +107,12 @@ public class SignUpActivity extends AppCompatActivity {
         protected WebInfoEntity doInBackground(String... strings) {
             RestTemplateWithCookie template = new RestTemplateWithCookie();
             String url = Configurations.HOST_ROOT + "/users/signUp?username={username}&password={password}";
-            WebInfoEntity webInfo = null;
+            WebInfoEntity webInfo = new WebInfoEntity();
             try {
                 webInfo = template.postForObject(url, null, WebInfoEntity.class, strings[0], strings[1]);
             } catch (Exception e) {
                 e.printStackTrace();
+                webInfo.haveException(e);
             }
             return webInfo;
         }

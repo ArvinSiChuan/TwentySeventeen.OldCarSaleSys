@@ -26,11 +26,16 @@ package com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general;
  * Date: 22-Nov-17
  * <p>
  * Package: com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general
+ *
  * @author ArvinSiChuan
  */
 public class Configurations {
-    public static final String HOST="192.168.137.1";
-    public static final String PORT="8080";
-    public static final String HOST_AND_PORT=HOST+":"+PORT;
-    public static final String HOST_ROOT="http://"+HOST_AND_PORT;
+    public static final String HOST = "192.168.137.1";
+    public static final String PORT = "8080";
+
+    /******************************************************
+     *          Auto Complete Configurations            **
+     *****************************************************/
+    public static final String HOST_AND_PORT = HOST + ":" + PORT;
+    public static final String HOST_ROOT = "http://" + HOST_AND_PORT;
 }

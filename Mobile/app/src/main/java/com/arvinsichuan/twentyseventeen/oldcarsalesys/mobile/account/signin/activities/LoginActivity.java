@@ -23,12 +23,17 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.arvinsichuan.resttool.RestTemplateWithCookie;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.R;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities.AuthoritiesEnum;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.signup.SignUpActivity;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.Configurations;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.activities.MainContentActivity;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.entities.WebInfoEntity;
 
 /**
@@ -100,16 +105,32 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected WebInfoEntity doInBackground(String... strings) {
-
             WebInfoEntity webInfo = new WebInfoEntity();
-
+            RestTemplateWithCookie template = new RestTemplateWithCookie();
+            String url = Configurations.HOST_ROOT + "/auth/login?username={username}&password={password}";
+            try {
+                webInfo = template.postForObject(url, null, WebInfoEntity.class, strings[0], strings[1]);
+            } catch (Exception e) {
+                e.printStackTrace();
+                webInfo.haveException(e);
+            }
             return webInfo;
         }
 
         @Override
         protected void onPostExecute(WebInfoEntity webInfo) {
             super.onPostExecute(webInfo);
-
+            if (webInfo.get("loginStatus") != null) {
+                Log.d("loginInfo", webInfo.get("loginStatus").toString());
+                AuthoritiesEnum authoritiesEnum = AuthoritiesEnum.valueOf(webInfo.get("loginStatus").toString());
+                if (authoritiesEnum == AuthoritiesEnum.ROLE_USER) {
+                    Toast.makeText(thisActivity, "Log In Successfully", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(thisActivity, MainContentActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(thisActivity, "Log In Failed", Toast.LENGTH_LONG).show();
+                }
+            }
         }
     }
 }

@@ -29,5 +29,16 @@
     <string name="sign_up_failed">Sign Up Failed,please check your internet connection and try again.</string>
     <string name="user_already_signed_up">User Already signed up, please try another username or just go signing in.
     </string>
+    <string name="title_activity_main_content">MainContentActivity</string>
+    <string name="title_activity_selling_car_list">SellingCarListActivity</string>
+
+    <!-- placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cars_in_sales">Cars In Sales</string>
+    <string name="shopping_chart">Shopping Chart</string>
+    <string name="users_self">Me</string>
+    <string name="cancel">Cancel</string>
+    <string name="password_again">Password Again</string>
+    <string name="change_password">Change Password</string>
 
 </resources>

@@ -43,6 +43,11 @@
                 android:label="@string/title_activity_sign_up"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+                android:name=".general.activities.MainContentActivity"
+                android:label="@string/title_activity_main_content"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

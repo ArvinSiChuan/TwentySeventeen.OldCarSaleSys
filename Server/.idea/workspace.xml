@@ -5,46 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33baaa9-d41a-4f68-8061-7d7d7162eec0" name="Default" comment="Migrate Auth module and init the session test.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/background-web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/ic_background-web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/ic_car_backup-web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/ic_launcher-web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-hdpi/ic_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-hdpi/ic_car_backup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-mdpi/ic_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-mdpi/ic_car_backup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xhdpi/ic_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xhdpi/ic_car_backup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxhdpi/ic_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxhdpi/ic_car_backup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxxhdpi/ic_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxxhdpi/ic_car_backup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/resttool/JsonObjectParseTool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/entities/AuthoritiesEnum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/entities/Authority.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/entities/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/Configurations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/entities/WebInfoEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/exceptions/DuplicatedDataException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/exceptions/EmptyDataException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/content_login.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/content_sign_up.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-hdpi/ic_selling_car_list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-hdpi/ic_shopping_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-hdpi/ic_userself.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-mdpi/ic_selling_car_list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-mdpi/ic_shopping_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-mdpi/ic_userself.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-xhdpi/ic_selling_car_list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-xhdpi/ic_shopping_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-xhdpi/ic_userself.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-xxhdpi/ic_selling_car_list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-xxhdpi/ic_shopping_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/drawable-xxhdpi/ic_userself.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/userprofile/UserProfileFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/fragments/CreatingOrderFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/fragments/SellingCarListFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/fragments/ShoppingChartFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/activities/MainContentActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/activity_main_content.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_creating_order.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_selling_car_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_shopping_chart.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_user_profile.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/menu/navigation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../Mobile/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/build.gradle" afterPath="$PROJECT_DIR$/../Mobile/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/androidTest/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/oldcarsalemobile/ExampleInstrumentedTest.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/androidTest/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/oldcarsalemobile/ExampleInstrumentedTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/entities/Authority.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/entities/Authority.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/entities/User.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/entities/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signin/activities/LoginActivity.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signin/activities/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signup/SignUpActivity.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signup/SignUpActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/Configurations.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/Configurations.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/activity_sign_up.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/activity_sign_up.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/899f52cf-56ee-4a7a-a48a-3bdecae2db4f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/899f52cf-56ee-4a7a-a48a-3bdecae2db4f.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/old-car-sale-server/target/" />
@@ -165,7 +159,7 @@
         <entry file="file://$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="303">
-              <caret line="114" column="5" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="114" selection-end-column="5" />
+              <caret line="114" column="5" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="114" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -174,8 +168,8 @@
       <file leaf-file-name="Authority.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/entity/Authority.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="77" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -337,16 +331,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="old-car-sale-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -356,7 +340,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
               <item name="general" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -367,7 +350,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
               <item name="general" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
@@ -379,7 +361,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
               <item name="general" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
@@ -392,20 +373,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
-              <item name="twentyseventeen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="old-car-sale-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
-              <item name="twentyseventeen" type="462c0819:PsiDirectoryNode" />
               <item name="oldcarsaleserver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -594,7 +562,7 @@
       <workItem from="1511178986598" duration="6620000" />
       <workItem from="1511188327958" duration="754000" />
       <workItem from="1511240566101" duration="6673000" />
-      <workItem from="1511326380391" duration="12147000" />
+      <workItem from="1511326380391" duration="13337000" />
     </task>
     <task id="LOCAL-00001" summary="Migrate Auth module and init the session test.">
       <created>1511250116702</created>
@@ -607,7 +575,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27305000" />
+    <option name="totallyTimeSpent" value="28495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -632,7 +600,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26077098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26077098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1050,15 +1018,15 @@
     <entry file="file://$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
-          <caret line="114" column="5" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="114" selection-end-column="5" />
+          <caret line="114" column="5" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="114" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/entity/Authority.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="303">
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
       </provider>

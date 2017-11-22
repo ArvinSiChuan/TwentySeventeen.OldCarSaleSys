@@ -18,8 +18,6 @@
 
 package com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -31,10 +29,12 @@ import java.util.List;
  * Date: 22-Nov-17
  * <p>
  * Package: com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities
+ *
+ * @author ArvinSiChuan
  */
-public class User implements Serializable{
+public class User implements Serializable {
 
-
+    private static final long serialVersionUID = -5303439524973257634L;
     private String username;
 
     private String password;
@@ -85,7 +85,6 @@ public class User implements Serializable{
     public void setAuthorities(List<Authority> authorities) {
         this.authorities = authorities;
     }
-
 
 
 //    public List<FileUploadRecord> getFileUploadRecords() {
