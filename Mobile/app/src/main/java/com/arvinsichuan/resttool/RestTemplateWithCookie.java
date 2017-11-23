@@ -87,37 +87,20 @@ public class RestTemplateWithCookie extends RestTemplate {
 
     @Override
     public <T> T getForObject(URI url, Class<T> responseType) throws RestClientException {
-        T t;
-        if (cookies.get(COOKIE_HEADER_NAME) == null) {
-            t = retrieveWithCookies(HttpMethod.GET, url.toString(), responseType);
-        } else {
-            t = super.getForObject(url, responseType);
-        }
-        return t;
+        return retrieveWithCookies(HttpMethod.GET, url.toString(), responseType);
     }
 
     @Override
     public <T> T getForObject(String url, Class<T> responseType, Object... urlVariables) throws RestClientException {
-        T t;
-        if (cookies.get(COOKIE_HEADER_NAME) == null) {
-            t = retrieveWithCookies(HttpMethod.GET, url, responseType, urlVariables);
-        } else {
-            t = super.getForObject(url, responseType);
-        }
-        return t;
+
+        return retrieveWithCookies(HttpMethod.GET, url, responseType, urlVariables);
     }
 
 
     @Override
     public <T> T getForObject(String url, Class<T> responseType, Map<String, ?> urlVariables) throws
             RestClientException {
-        T t;
-        if (cookies.get(COOKIE_HEADER_NAME) == null) {
-            t = retrieveWithCookies(HttpMethod.GET, url, responseType, urlVariables);
-        } else {
-            t = super.getForObject(url, responseType, urlVariables);
-        }
-        return t;
+        return retrieveWithCookies(HttpMethod.GET, url, responseType, urlVariables);
     }
 
 
@@ -236,7 +219,7 @@ public class RestTemplateWithCookie extends RestTemplate {
     }
 
 
-    private void retrieveCsrfToken() {
+    public void retrieveCsrfToken() {
         Map<String, String> csrfMap = getForObject(CSRF_TOKEN_URL, Map.class);
         String headerName = csrfMap.get(CSRF_HEADER_IDENTIFIER);
         String headerValue = csrfMap.get(CSRF_TOKEN_IDENTIFIER);
