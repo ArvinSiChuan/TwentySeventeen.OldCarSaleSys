@@ -38,4 +38,7 @@ public class Configurations {
      *****************************************************/
     public static final String HOST_AND_PORT = HOST + ":" + PORT;
     public static final String HOST_ROOT = "http://" + HOST_AND_PORT;
+
+    public static String USERNAME = null;
+    public static String PASSWORD = null;
 }

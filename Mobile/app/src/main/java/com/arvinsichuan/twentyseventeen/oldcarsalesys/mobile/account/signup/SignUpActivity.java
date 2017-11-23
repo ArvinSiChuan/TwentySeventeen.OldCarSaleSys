@@ -34,7 +34,6 @@ import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.R;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities.User;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.Configurations;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.entities.WebInfoEntity;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.util.Map;
@@ -112,7 +111,7 @@ public class SignUpActivity extends AppCompatActivity {
                 webInfo = template.postForObject(url, null, WebInfoEntity.class, strings[0], strings[1]);
             } catch (Exception e) {
                 e.printStackTrace();
-                webInfo.haveException(e);
+                webInfo.exception(e);
             }
             return webInfo;
         }

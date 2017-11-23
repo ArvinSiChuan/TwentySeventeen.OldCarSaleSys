@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public static final int REQUEST_CODE_FOR_SIGN_UP_ACTIVITY = 0;
+    private static final String TAG = "LOGIN_ACTIVITY";
 
     private LoginActivity thisActivity = this;
     private EditText usernameText;
@@ -110,9 +111,10 @@ public class LoginActivity extends AppCompatActivity {
             String url = Configurations.HOST_ROOT + "/auth/login?username={username}&password={password}";
             try {
                 webInfo = template.postForObject(url, null, WebInfoEntity.class, strings[0], strings[1]);
+                template.retrieveCsrfToken();
             } catch (Exception e) {
                 e.printStackTrace();
-                webInfo.haveException(e);
+                webInfo.exception(e);
             }
             return webInfo;
         }
@@ -125,6 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                 AuthoritiesEnum authoritiesEnum = AuthoritiesEnum.valueOf(webInfo.get("loginStatus").toString());
                 if (authoritiesEnum == AuthoritiesEnum.ROLE_USER) {
                     Toast.makeText(thisActivity, "Log In Successfully", Toast.LENGTH_LONG).show();
+                    Log.d(TAG, "onPostExecute: "+webInfo);
                     Intent intent = new Intent(thisActivity, MainContentActivity.class);
                     startActivity(intent);
                 } else {

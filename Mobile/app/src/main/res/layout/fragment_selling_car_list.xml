@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~     This project is one of projects of ArvinSiChuan.com.
   ~     Copyright (C) 2017, ArvinSiChuan.com <https://arvinsichuan.com>.
@@ -22,7 +23,15 @@
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
                                              tools:context="com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.carsales.fragments.SellingCarListFragment"
-                                             android:id="@+id/fragment_order_lsit">
+                                             android:id="@+id/fragment_selling_car_list">
 
 
+    <ListView
+            android:layout_width="368dp"
+            android:layout_height="495dp"
+            android:id="@+id/listview_selling_cars_list"
+            android:scrollbars="horizontal" android:headerDividersEnabled="true"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="0dp" android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"/>
 </android.support.constraint.ConstraintLayout>
