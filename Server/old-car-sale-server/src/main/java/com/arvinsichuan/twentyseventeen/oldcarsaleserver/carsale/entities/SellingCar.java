@@ -21,6 +21,7 @@ package com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.entities;
 import com.arvinsichuan.general.users.entity.User;
 import com.arvinsichuan.twentyseventeen.oldcarsaleserver.commet.entities.Comment;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -84,7 +85,7 @@ public class SellingCar implements Serializable {
     /**
      * DD012 Ignore Parent side indexes
      */
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "car_seller", nullable = false,
             foreignKey = @ForeignKey(name = "fk_selling_car_users"))
     private User carSeller;
@@ -98,7 +99,7 @@ public class SellingCar implements Serializable {
     /**
      * DD023
      */
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "related_order", foreignKey = @ForeignKey(name = "fk_selling_car_order"))
     private Order relatedOrder;
 
@@ -196,7 +197,11 @@ public class SellingCar implements Serializable {
     }
 
     public String getRelatedOrderUuid() {
-        return relatedOrder.getUuid();
+        if (relatedOrder==null){
+            return null;
+        }else {
+            return relatedOrder.getUuid();
+        }
     }
 
     public void setRelatedOrder(Order relatedOrder) {

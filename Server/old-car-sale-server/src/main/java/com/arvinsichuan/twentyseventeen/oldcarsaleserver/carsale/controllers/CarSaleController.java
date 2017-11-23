@@ -16,49 +16,50 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.general.users.controller;
-
+package com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.controllers;
 
 import com.arvinsichuan.general.WebInfoEntity;
-import com.arvinsichuan.general.exceptions.DuplicatedDataException;
-import com.arvinsichuan.general.users.entity.AuthoritiesEnum;
-import com.arvinsichuan.general.users.service.UserService;
+import com.arvinsichuan.general.exceptions.EmptyDataException;
+import com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.entities.SellingCar;
+import com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.services.CarSaleService;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.io.Serializable;
+import java.util.List;
 
 /**
- * Project theWhiteSail
+ * Project Server
  * <p>
  * Author: arvinsc@foxmail.com
  * <p>
- * Date: 2017/9/28
+ * Date: 23-Nov-17
  * <p>
- * Package: com.arvinsichuan.users.controller
+ * Package: com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.controllers
+ *
+ * @author ArvinSiChuan
  */
 @RestController
-@RequestMapping(path = "/users")
-public class UserController {
+@RequestMapping("/carSale")
+public class CarSaleController {
+    @Resource(name = "carSaleService")
+    private CarSaleService carSaleService;
 
-    @Resource(name = "userService")
-    private UserService userService;
-
+    @GetMapping("/inSales")
     @PreAuthorize("hasRole('ROLE_USER')")
-    @RequestMapping(path = "/signUp", method = RequestMethod.POST)
-    public Serializable signUp(@RequestParam(value = "username") String name, @RequestParam(value =
-            "password") String password, @RequestParam(value = "role", required = false) AuthoritiesEnum role) {
+    public WebInfoEntity getSellingCarByPage(@RequestParam("startPage") int startPage,
+                                             @RequestParam("pageSize") int pageSize) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-        try {
-            webInfoEntity = userService.userSignUp(name, password, role);
-        } catch (DuplicatedDataException e) {
-            webInfoEntity.exception(e);
+        List<SellingCar> data = carSaleService.getSellingCars(startPage, pageSize);
+        if (data != null && !data.isEmpty()) {
+            webInfoEntity.ok();
+            webInfoEntity.addInfoAndData("carList", data);
+        } else {
+            webInfoEntity.exception(new EmptyDataException("CAR_LIST"));
         }
         return webInfoEntity;
     }
-
 }

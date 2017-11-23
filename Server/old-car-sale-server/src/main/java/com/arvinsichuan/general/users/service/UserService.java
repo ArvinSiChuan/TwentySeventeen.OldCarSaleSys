@@ -52,11 +52,12 @@ public class UserService {
     private BCryptPasswordEncoder passwordEncoder;
 
     @Transactional(rollbackFor = DuplicatedDataException.class)
-    public WebInfoEntity userSignUp(String username, String password) throws DuplicatedDataException {
+    public WebInfoEntity userSignUp(String username, String password, AuthoritiesEnum role) throws
+            DuplicatedDataException {
         WebInfoEntity webInfo = new WebInfoEntity();
         User userInDB = userRepository.findOne(username);
         if (userInDB != null && userInDB.getUsername().equals(username)) {
-           throw new DuplicatedDataException("User.username value: "+username);
+            throw new DuplicatedDataException("User.username value: " + username);
         } else {
 //          Process username to lowercase
             username = username.toLowerCase();
@@ -76,16 +77,18 @@ public class UserService {
             authority.setAuthority(AuthoritiesEnum.ROLE_USER);
             List<Authority> authorities = new ArrayList<>();
             authorities.add(authority);
+            if (role != null) {
+                authorities.add(new Authority(role, user));
+            }
             user.setAuthorities(authorities);
-
             try {
                 userRepository.save(user);
                 user.setPassword("[PROTECTED]");
-                webInfo.isOK();
+                webInfo.ok();
                 webInfo.addInfoAndData("user", user);
             } catch (Exception e) {
                 e.printStackTrace();
-                webInfo.haveException(e, "Exception in saving");
+                webInfo.exception(e, "Exception in saving");
             }
         }
         return webInfo;

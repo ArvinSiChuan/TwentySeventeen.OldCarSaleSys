@@ -32,6 +32,6 @@ public class EmptyDataException extends Exception {
     private static final long serialVersionUID = -8473288004413293738L;
 
     public EmptyDataException(String message) {
-        super(message);
+        super("Empty Data at:"+message);
     }
 }

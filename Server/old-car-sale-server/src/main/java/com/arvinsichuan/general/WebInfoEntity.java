@@ -18,6 +18,8 @@
 
 package com.arvinsichuan.general;
 
+
+
 import com.arvinsichuan.general.exceptions.DuplicatedDataException;
 
 import java.util.TreeMap;
@@ -41,8 +43,7 @@ public class WebInfoEntity extends TreeMap<String, Object> {
 
     public enum Status {
         /**
-         * OK - Status OK
-         * Status code starts with 0 (0[0-9]*)
+         * OK - Status OK Status code starts with 0 (0[0-9]*)
          */
         OK,
         /*
@@ -62,20 +63,20 @@ public class WebInfoEntity extends TreeMap<String, Object> {
     }
 
 
-    public WebInfoEntity isOK() {
+    public WebInfoEntity ok() {
         put("status", Status.OK);
         put("code", Status.OK.ordinal());
         return this;
     }
 
-    public WebInfoEntity haveException(Exception e) {
+    public WebInfoEntity exception(Exception e) {
         put("status", Status.EXCEPTION);
         put("code", Status.EXCEPTION.ordinal());
         put("message", e.getMessage());
         return this;
     }
 
-    public WebInfoEntity haveException(Exception e, String message) {
+    public WebInfoEntity exception(Exception e, String message) {
         put("status", Status.EXCEPTION);
         put("code", Status.EXCEPTION.ordinal());
         put("message", e.getMessage() + "; Additional Message:" + message);
@@ -88,28 +89,36 @@ public class WebInfoEntity extends TreeMap<String, Object> {
     }
 
     public WebInfoEntity emptyData() {
-        return haveException(new DuplicatedDataException(Status.EMPTY_DATA.toString()))
+        return exception(new DuplicatedDataException(Status.EMPTY_DATA.toString()))
                 .setCode(Status.EXCEPTION.ordinal() + EMPTY_DATA_CODE);
     }
 
     public WebInfoEntity emptyData(String message) {
-        return haveException(new DuplicatedDataException(Status.EMPTY_DATA+": "+message))
+        return exception(new DuplicatedDataException(Status.EMPTY_DATA + ": " + message))
                 .setCode(Status.EXCEPTION.ordinal() + EMPTY_DATA_CODE);
     }
 
     public WebInfoEntity duplicatedData() {
-        return haveException(new DuplicatedDataException(Status.DUPLICATE_DATA.toString()))
+        return exception(new DuplicatedDataException(Status.DUPLICATE_DATA.toString()))
                 .setCode(Status.EXCEPTION.ordinal() + DUPLICATED_DATA_CODE);
     }
 
     public WebInfoEntity duplicatedData(String message) {
-        return haveException(new DuplicatedDataException(Status.DUPLICATE_DATA + ": " + message))
+        return exception(new DuplicatedDataException(Status.DUPLICATE_DATA + ": " + message))
                 .setCode(Status.EXCEPTION.ordinal() + DUPLICATED_DATA_CODE);
     }
 
     private WebInfoEntity setCode(String code) {
         put("code", code);
         return this;
+    }
+
+    public boolean isOk() {
+        return Status.OK == get("status");
+    }
+
+    public boolean haveException(){
+        return Status.EXCEPTION == get("status");
     }
 
 }

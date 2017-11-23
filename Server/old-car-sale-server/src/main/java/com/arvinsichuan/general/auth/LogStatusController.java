@@ -42,7 +42,7 @@ public class LogStatusController {
     @RequestMapping(path = "/status", method = RequestMethod.POST)
     public Serializable getLoginStatus() {
         WebInfoEntity info = new WebInfoEntity();
-        info.isOK();
+        info.ok();
         info.addInfoAndData("loginStatus", SecurityInfo.getTopAuth());
         info.addInfoAndData("roleCode", SecurityInfo.getTopAuth().ordinal());
         return info;
