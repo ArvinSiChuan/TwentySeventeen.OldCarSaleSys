@@ -25,18 +25,61 @@
                                              android:id="@+id/fragment_user_profile">
 
     <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView_userprofile_username"
-            android:hint="@string/username" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="64dp"
-            android:layout_marginLeft="90dp" app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent" app:layout_constraintHorizontal_bias="0.501"/>
+            android:hint="@string/username"
+            app:layout_constraintLeft_toRightOf="@+id/textView"
+            android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/textView"
+            android:layout_marginTop="0dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_userprofile_change_password"
-            android:text="@string/change_password" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView_userprofile_username" android:layout_marginLeft="90dp"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:text="@string/change_password"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText_profile_passAgain"
+            app:layout_constraintLeft_toLeftOf="@+id/textView_label_passAgain"/>
+    <TextView
+            android:text="@string/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" android:layout_marginStart="80dp" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="32dp"  />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editText_profile_password"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView_label_password"
+            app:layout_constraintLeft_toLeftOf="@+id/textView_label_password"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editText_profile_passAgain"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView_label_passAgain" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_label_passAgain"/>
+    <TextView
+            android:text="@string/password"
+            android:labelFor="@+id/editText_profile_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView_label_password"
+            android:layout_marginStart="0dp" app:layout_constraintLeft_toLeftOf="@+id/textView"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView"/>
+    <TextView
+            android:text="@string/password_again"
+            android:labelFor="@+id/editText_profile_passAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_label_passAgain"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText_profile_password" android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView_label_password"/>
 </android.support.constraint.ConstraintLayout>

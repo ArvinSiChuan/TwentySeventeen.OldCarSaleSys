@@ -20,13 +20,12 @@ package com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.controllers;
 
 import com.arvinsichuan.general.WebInfoEntity;
 import com.arvinsichuan.general.exceptions.EmptyDataException;
+import com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.entities.ChartList;
 import com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.entities.SellingCar;
 import com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.services.CarSaleService;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -44,7 +43,10 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/carSale")
+@SessionAttributes(value = {CarSaleController.myChartPara}, types = {ChartList.class})
 public class CarSaleController {
+    public static final String myChartPara = "myChart";
+
     @Resource(name = "carSaleService")
     private CarSaleService carSaleService;
 
@@ -62,4 +64,50 @@ public class CarSaleController {
         }
         return webInfoEntity;
     }
+
+    @PostMapping("/addToChart")
+    @PreAuthorize("hasRole('ROLE_BUYER')")
+    public WebInfoEntity addToChart(@RequestBody SellingCar sellingCar, Model model,
+                                    ChartList chartList) {
+        WebInfoEntity webInfoEntity = new WebInfoEntity();
+        if (chartList == null) {
+            chartList = new ChartList();
+        }
+        chartList.add(sellingCar);
+        model.addAttribute(myChartPara, chartList);
+        webInfoEntity.ok();
+        webInfoEntity.addInfoAndData(myChartPara, chartList.getList());
+        return webInfoEntity;
+    }
+
+    @GetMapping("/myChart")
+    @PreAuthorize("hasRole('ROLE_BUYER')")
+    public WebInfoEntity getShoppingChart(ChartList chartList) {
+        WebInfoEntity webInfoEntity = new WebInfoEntity();
+        if (chartList != null && !chartList.getList().isEmpty()) {
+            webInfoEntity.addInfoAndData(myChartPara, chartList.getList());
+            webInfoEntity.ok();
+        } else {
+            webInfoEntity.exception(new EmptyDataException("CHART_EMPTY"));
+        }
+        return webInfoEntity;
+    }
+
+    @PostMapping("/removeFromChart")
+    @PreAuthorize("hasRole('ROLE_BUYER')")
+    public WebInfoEntity removeFromShoppingChart(@RequestBody SellingCar sellingCar, Model model,ChartList chartList) {
+        WebInfoEntity webInfoEntity = new WebInfoEntity();
+        if (chartList != null && !chartList.getList().isEmpty()) {
+            System.out.println(sellingCar.getCarSeries());
+            chartList.remove(sellingCar);
+            webInfoEntity.addInfoAndData(myChartPara, chartList.getList());
+            chartList.getList().forEach((sellingCar1) -> {System.out.println(sellingCar.getCarSeries());});
+            webInfoEntity.ok();
+        } else {
+            webInfoEntity.exception(new EmptyDataException("CHART_EMPTY"));
+        }
+        return webInfoEntity;
+    }
+
+
 }

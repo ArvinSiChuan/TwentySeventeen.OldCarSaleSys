@@ -31,6 +31,7 @@ import android.widget.Toast;
 import com.arvinsichuan.resttool.JsonObjectParseTool;
 import com.arvinsichuan.resttool.RestTemplateWithCookie;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.R;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities.AuthoritiesEnum;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities.User;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.Configurations;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.entities.WebInfoEntity;
@@ -105,10 +106,11 @@ public class SignUpActivity extends AppCompatActivity {
         @Override
         protected WebInfoEntity doInBackground(String... strings) {
             RestTemplateWithCookie template = new RestTemplateWithCookie();
-            String url = Configurations.HOST_ROOT + "/users/signUp?username={username}&password={password}";
+            String url = Configurations.HOST_ROOT + "/users/signUp?username={username}&password={password}&role={role}";
             WebInfoEntity webInfo = new WebInfoEntity();
             try {
-                webInfo = template.postForObject(url, null, WebInfoEntity.class, strings[0], strings[1]);
+                webInfo = template.postForObject(url, null, WebInfoEntity.class, strings[0], strings[1],
+                        AuthoritiesEnum.ROLE_BUYER);
             } catch (Exception e) {
                 e.printStackTrace();
                 webInfo.exception(e);

@@ -62,6 +62,7 @@ public class WebInfoEntity extends TreeMap<String, Object> {
     }
 
 
+
     public WebInfoEntity ok() {
         put("status", Status.OK);
         put("code", Status.OK.ordinal());
@@ -113,11 +114,23 @@ public class WebInfoEntity extends TreeMap<String, Object> {
     }
 
     public boolean isOk() {
-        return Status.OK == Status.valueOf(get("status").toString());
+        String status;
+        if (get("status")!=null){
+            status = get("status").toString();
+        }else {
+            return false;
+        }
+        return Status.OK == Status.valueOf(status);
     }
 
-    public boolean haveException(){
-        return Status.EXCEPTION == Status.valueOf(get("status").toString());
+    public boolean haveException() {
+        String status;
+        if (get("status")!=null){
+            status = get("status").toString();
+        }else {
+            return false;
+        }
+        return Status.EXCEPTION == Status.valueOf(status);
     }
 
 }

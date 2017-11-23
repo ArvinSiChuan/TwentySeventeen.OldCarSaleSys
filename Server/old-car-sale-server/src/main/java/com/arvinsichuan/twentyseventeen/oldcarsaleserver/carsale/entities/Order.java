@@ -19,10 +19,10 @@
 package com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.entities;
 
 import com.arvinsichuan.general.users.entity.User;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -70,15 +70,18 @@ public class Order implements Serializable {
     @Column(name = "status", length = 24, nullable = false)
     private OrderStatus status = OrderStatus.CREATED;
 
+    @OneToMany(mappedBy = "relatedOrder")
+    private List<SellingCar> sellingCarList;
 
     public Order() {
     }
 
-    public Order(String uuid, double sumAmount, User buyer, OrderStatus status) {
+    public Order(String uuid, double sumAmount, User buyer, OrderStatus status, List<SellingCar> sellingCarList) {
         this.uuid = uuid;
         this.sumAmount = sumAmount;
         this.buyer = buyer;
         this.status = status;
+        this.sellingCarList = sellingCarList;
     }
 
     public String getUuid() {
@@ -113,5 +116,11 @@ public class Order implements Serializable {
         this.status = status;
     }
 
+    public List<SellingCar> getSellingCarList() {
+        return sellingCarList;
+    }
 
+    public void setSellingCarList(List<SellingCar> sellingCarList) {
+        this.sellingCarList = sellingCarList;
+    }
 }

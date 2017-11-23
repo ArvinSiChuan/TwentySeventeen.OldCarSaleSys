@@ -57,9 +57,15 @@ public class MainContentActivity extends AppCompatActivity implements View.OnCli
         contentContainer = (FrameLayout) findViewById(R.id.content_container);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
         currentFragment = sellingCarListFragment = new SellingCarListFragment();
+        sellingCarListFragment.setMainContentActivity(this);
+
         shoppingChartFragment = new ShoppingChartFragment();
+        shoppingChartFragment.setMainContentActivity(this);
+
         userProfileFragment = new UserProfileFragment();
+
         creatingOrderFragment = new CreatingOrderFragment();
 
         getFragmentManager()
@@ -79,8 +85,12 @@ public class MainContentActivity extends AppCompatActivity implements View.OnCli
             switch (item.getItemId()) {
                 case R.id.navigation_shopping_chart:
                     switchTo(shoppingChartFragment);
+                    if (shoppingChartFragment.getView() != null) {
+                        shoppingChartFragment.updateChart();
+                    }
                     return true;
                 case R.id.navigation_selling_car_lsit:
+                    sellingCarListFragment.executeUpdate();
                     switchTo(sellingCarListFragment);
                     return true;
                 case R.id.navigation_userself:
@@ -94,7 +104,7 @@ public class MainContentActivity extends AppCompatActivity implements View.OnCli
     };
 
 
-    private void switchTo(Fragment fragment) {
+    public void switchTo(Fragment fragment) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         if (currentFragment != fragment) {
             if (!fragment.isAdded()) {
@@ -115,8 +125,11 @@ public class MainContentActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-
+            case R.id.imageButton_back:
+                switchTo(sellingCarListFragment);
+                break;
             default:
+                Log.d(TAG, "onClick: Default");
                 break;
         }
     }

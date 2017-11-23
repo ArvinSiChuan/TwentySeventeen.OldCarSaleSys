@@ -112,6 +112,8 @@ public class LoginActivity extends AppCompatActivity {
             try {
                 webInfo = template.postForObject(url, null, WebInfoEntity.class, strings[0], strings[1]);
                 template.retrieveCsrfToken();
+                webInfo.addInfoAndData("usernameTemp",strings[0]);
+                webInfo.addInfoAndData("passwordTemp", strings[1]);
             } catch (Exception e) {
                 e.printStackTrace();
                 webInfo.exception(e);
@@ -128,6 +130,8 @@ public class LoginActivity extends AppCompatActivity {
                 if (authoritiesEnum == AuthoritiesEnum.ROLE_USER) {
                     Toast.makeText(thisActivity, "Log In Successfully", Toast.LENGTH_LONG).show();
                     Log.d(TAG, "onPostExecute: "+webInfo);
+                    Configurations.USERNAME = webInfo.get("usernameTemp").toString();
+                    Configurations.PASSWORD = webInfo.get("passwordTemp").toString();
                     Intent intent = new Intent(thisActivity, MainContentActivity.class);
                     startActivity(intent);
                 } else {

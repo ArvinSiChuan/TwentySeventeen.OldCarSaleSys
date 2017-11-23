@@ -19,6 +19,8 @@
 package com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.repositories;
 
 import com.arvinsichuan.twentyseventeen.oldcarsaleserver.carsale.entities.SellingCar;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
@@ -60,4 +62,11 @@ public interface SellingCarPagingRepo extends PagingAndSortingRepository<Selling
      */
     @Override
     List<SellingCar> findAll(Iterable<String> iterable);
+
+    /**
+     * In sales cars
+     * @param pageable
+     * @return
+     */
+    Page<SellingCar> findAllByRelatedOrderIsNull(Pageable pageable);
 }

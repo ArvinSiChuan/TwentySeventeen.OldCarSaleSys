@@ -48,7 +48,6 @@ public class UserController {
     @Resource(name = "userService")
     private UserService userService;
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     @RequestMapping(path = "/signUp", method = RequestMethod.POST)
     public Serializable signUp(@RequestParam(value = "username") String name, @RequestParam(value =
             "password") String password, @RequestParam(value = "role", required = false) AuthoritiesEnum role) {

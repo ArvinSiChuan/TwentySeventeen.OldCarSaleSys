@@ -20,8 +20,11 @@ package com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.carsales.entities;
 
 
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -59,15 +62,19 @@ public class Order implements Serializable {
      */
     private OrderStatus status = OrderStatus.CREATED;
 
+    @JsonManagedReference
+    private List<SellingCar> sellingCars;
+
 
     public Order() {
     }
 
-    public Order(String uuid, double sumAmount, User buyer, OrderStatus status) {
+    public Order(String uuid, double sumAmount, User buyer, OrderStatus status, List<SellingCar> sellingCars) {
         this.uuid = uuid;
         this.sumAmount = sumAmount;
         this.buyer = buyer;
         this.status = status;
+        this.sellingCars = sellingCars;
     }
 
     public String getUuid() {
@@ -102,5 +109,11 @@ public class Order implements Serializable {
         this.status = status;
     }
 
+    public List<SellingCar> getSellingCars() {
+        return sellingCars;
+    }
 
+    public void setSellingCars(List<SellingCar> sellingCars) {
+        this.sellingCars = sellingCars;
+    }
 }

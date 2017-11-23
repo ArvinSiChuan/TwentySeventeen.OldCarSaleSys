@@ -22,6 +22,8 @@ package com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.carsales.entities;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.entities.User;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.comment.entities.Comment;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.io.Serializable;
 import java.util.List;
@@ -38,6 +40,7 @@ import java.util.UUID;
  *
  * @author ArvinSiChuan
  */
+@JsonIgnoreProperties({ "relatedOrderUuid"})
 public class SellingCar implements Serializable {
 
     private static final long serialVersionUID = 2878324667591229814L;
@@ -85,11 +88,14 @@ public class SellingCar implements Serializable {
     /**
      * DD023
      */
+    @JsonBackReference
     private Order relatedOrder;
 
     /**
      * Cardinality Children to DD015
      */
+
+    @JsonManagedReference
     private List<Comment> comments;
 
 
@@ -174,22 +180,14 @@ public class SellingCar implements Serializable {
         this.expectedPrice = expectedPrice;
     }
 
-    @JsonBackReference
     public Order getRelatedOrder() {
         return relatedOrder;
-    }
-
-    public String getRelatedOrderUuid() {
-        if (relatedOrder==null){
-            return null;
-        }else {
-            return relatedOrder.getUuid();
-        }
     }
 
     public void setRelatedOrder(Order relatedOrder) {
         this.relatedOrder = relatedOrder;
     }
+
 
     public List<Comment> getComments() {
         return comments;

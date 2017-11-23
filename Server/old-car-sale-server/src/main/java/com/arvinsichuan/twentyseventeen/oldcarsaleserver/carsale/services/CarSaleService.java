@@ -45,7 +45,11 @@ public class CarSaleService {
     private SellingCarPagingRepo sellingCarPagingRepo;
 
     public List<SellingCar> getSellingCars(int startPage, int pageSize) {
-        Page<SellingCar> page = sellingCarPagingRepo.findAll(new PageRequest(startPage, pageSize));
+        Page<SellingCar> page = sellingCarPagingRepo.findAllByRelatedOrderIsNull(new PageRequest(startPage, pageSize));
         return page.getContent();
+    }
+
+    public SellingCar validateSellingCar(String uuid){
+        return sellingCarPagingRepo.findOne(uuid);
     }
 }

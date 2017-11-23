@@ -21,17 +21,20 @@ package com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.account.userprofil
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.R;
+import com.arvinsichuan.twentyseventeen.oldcarsalesys.mobile.general.Configurations;
 
 /**
  * A simple {@link Fragment} subclass.
+ * @author ArvinSiChuan
  */
 public class UserProfileFragment extends Fragment {
-
+    public static final String TAG = "USER_PROFILE_FRAG";
 
     private TextView usernameTextView;
 
@@ -41,7 +44,8 @@ public class UserProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_user_profile, container, false);
         usernameTextView = view.findViewById(R.id.textView_userprofile_username);
-//        usernameTextView.setText(RestTemplatesBuilder.getInstance().getUser().getUsername());
+        usernameTextView.setText(Configurations.USERNAME);
+        Log.d(TAG, "onCreateView: "+Configurations.USERNAME);
         return view;
     }
 

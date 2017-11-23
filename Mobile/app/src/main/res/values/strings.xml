@@ -27,10 +27,11 @@
     <!--label text-->
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="sing_in">SING IN</string>
+    <string name="sign_in">SIGN IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="car_trip">Car Trip</string>
     <string name="car_price">Car Price</string>
+    <string name="car_year">Car Year</string>
     <string name="colon">:</string>
     <string name="money_RMB">¥</string>
 
@@ -42,13 +43,28 @@
     <string name="cancel">Cancel</string>
     <string name="password_again">Password Again</string>
     <string name="change_password">Change Password</string>
+    <string name="backup_car_img">Backup Car Img</string>
 
     <!--Tips Text-->
     <string name="network_error">Can not connect to server, please check your internet connection.</string>
     <string name="sign_up_failed">Sign Up Failed,please check your internet connection and try again.</string>
     <string name="user_already_signed_up">User Already signed up, please try another username or just go signing in.
     </string>
+
+    <string name="add_successful">Add To Chart Successful.</string>
+    <string name="add_failed">Add To Chart Failed.</string>
+    <string name="remove_successful">Remove Successful.</string>
+    <string name="remove_failed">Remove Failed.</string>
+
+    <!--Auto Generated Text-->
     <string name="no_data">No data available now.</string>
+    <string name="details">Details…</string>
+    <string name="buy">Buy</string>
+    <string name="add_to_chart">Add to chart</string>
+    <string name="go_back">Go back</string>
+    <string name="car_desc">Car Description</string>
+    <string name="title">Title</string>
+    <string name="submit_order">Submit Order</string>
 
 
 </resources>
