@@ -4,35 +4,8 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d33baaa9-d41a-4f68-8061-7d7d7162eec0" name="Default" comment="Migrate Auth module and init the session test.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/adapters/SellingCarAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/entities/Order.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/entities/OrderStatus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/entities/SellingCar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/comment/entities/Comment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/comment/entities/CommentType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/layout_viewlist_selling_car.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsaleserver/carsale/controllers/CarSaleController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsaleserver/carsale/services/CarSaleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../Mobile/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signin/activities/LoginActivity.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signin/activities/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signup/SignUpActivity.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/account/signup/SignUpActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/fragments/SellingCarListFragment.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/carsales/fragments/SellingCarListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/Configurations.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/Configurations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/entities/WebInfoEntity.java" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsalesys/mobile/general/entities/WebInfoEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_creating_order.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_creating_order.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_selling_car_list.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_selling_car_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_shopping_chart.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_shopping_chart.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_user_profile.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/layout/fragment_user_profile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../Mobile/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="d33baaa9-d41a-4f68-8061-7d7d7162eec0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/WebInfoEntity.java" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/WebInfoEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/auth/LogStatusController.java" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/auth/LogStatusController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/exceptions/EmptyDataException.java" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/exceptions/EmptyDataException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/controller/UserController.java" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/entity/User.java" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/service/UserService.java" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/general/users/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsaleserver/carsale/entities/SellingCar.java" afterPath="$PROJECT_DIR$/old-car-sale-server/src/main/java/com/arvinsichuan/twentyseventeen/oldcarsaleserver/carsale/entities/SellingCar.java" />
     </list>
     <ignored path="$PROJECT_DIR$/old-car-sale-server/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1143,7 +1116,7 @@
       <workItem from="1511188327958" duration="754000" />
       <workItem from="1511240566101" duration="6673000" />
       <workItem from="1511326380391" duration="13337000" />
-      <workItem from="1511396695399" duration="8650000" />
+      <workItem from="1511396695399" duration="8709000" />
     </task>
     <task id="LOCAL-00001" summary="Migrate Auth module and init the session test.">
       <created>1511250116702</created>
@@ -1152,11 +1125,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511250116702</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update Server at Selling Car.">
+      <created>1511411768850</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511411768850</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37145000" />
+    <option name="totallyTimeSpent" value="37204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -1203,7 +1183,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Migrate Auth module and init the session test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrate Auth module and init the session test." />
+    <MESSAGE value="Update Server at Selling Car." />
+    <MESSAGE value="Update Server at WebInfo Entity to support Web Better." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Server at WebInfo Entity to support Web Better." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
